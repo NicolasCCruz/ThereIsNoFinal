@@ -453,7 +453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1882153289412286256, guid: 6647eb79b905d104dbf4d52460cd63ad, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1882153289412286256, guid: 6647eb79b905d104dbf4d52460cd63ad, type: 3}
       propertyPath: m_SizeDelta.y
@@ -711,9 +711,10 @@ GameObject:
   - component: {fileID: 537412669}
   - component: {fileID: 537412668}
   - component: {fileID: 537412667}
+  - component: {fileID: 537412670}
   m_Layer: 5
   m_Name: PauseButton
-  m_TagString: Untagged
+  m_TagString: PauseBttn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -781,7 +782,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 537412668}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 537412670}
+        m_TargetAssemblyTypeName: NarratorTrigger, Assembly-CSharp
+        m_MethodName: TriggerNarrator
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &537412668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -820,6 +833,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537412665}
   m_CullTransparentMesh: 1
+--- !u!114 &537412670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537412665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598956a098e3d185ca0002ab04642bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrator: {fileID: 11400000, guid: e125d384e8a3fae8d9bb1f7afd279a9b, type: 2}
+  secondLines: {fileID: 0}
 --- !u!1 &702270197
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,6 +1025,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702270197}
   m_CullTransparentMesh: 1
+--- !u!114 &702389334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5121461687248674944, guid: 6647eb79b905d104dbf4d52460cd63ad, type: 3}
+  m_PrefabInstance: {fileID: 321342495}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &820775402
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,6 +1566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resume
       objectReference: {fileID: 0}
+    - target: {fileID: 1561269977182450273, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
+      propertyPath: m_TagString
+      value: ResumeBttn
+      objectReference: {fileID: 0}
     - target: {fileID: 3120195617769331093, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
       propertyPath: m_text
       value: 'RESUME
@@ -1564,11 +1606,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4280502692932392207, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4280502692932392207, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1155115695}
+    - target: {fileID: 4280502692932392207, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280502692932392207, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerNarrator
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280502692932392207, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NarratorTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280502692932392207, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7186000522709291763, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
       propertyPath: m_Name
@@ -1578,7 +1636,10 @@ PrefabInstance:
     - {fileID: 7717499617711676624, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1561269977182450273, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1155115695}
   m_SourcePrefab: {fileID: 100100000, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
 --- !u!224 &1142260581 stripped
 RectTransform:
@@ -1601,12 +1662,31 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4280502692932392207, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
   m_PrefabInstance: {fileID: 1142260580}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1155115692}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1155115692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1561269977182450273, guid: f8c5b98a5863d5444a00472e62af6bc1, type: 3}
+  m_PrefabInstance: {fileID: 1142260580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1155115695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155115692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 598956a098e3d185ca0002ab04642bd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  narrator: {fileID: 11400000, guid: 3f1f95b1e474ff1e1971ade1d2f9b3fe, type: 2}
+  secondLines: {fileID: 11400000, guid: 1bf5c09da20a597cd87ed4b10abdecd9, type: 2}
 --- !u!1 &1415945874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,10 +2322,112 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: -8, y: -5, z: -8, w: -5}
   m_Softness: {x: 0, y: 0}
+--- !u!1001 &1957243069
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2225738402330122714, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4006759
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225738402330122714, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.49097112
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225738402330122714, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 101.828094
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225738402330122714, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225738402330122714, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225738402330122714, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225738402330122714, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225738402330122714, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225738402330122714, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2225738402330122714, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791201642005474365, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: secondLines
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bf5c09da20a597cd87ed4b10abdecd9, type: 2}
+    - target: {fileID: 2791201642005474365, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: narratorText
+      value: 
+      objectReference: {fileID: 702389334}
+    - target: {fileID: 2791201642005474365, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: nmLines.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791201642005474365, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: 'nmLines.Array.data[0]'
+      value: Wait! No. No no no.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791201642005474365, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: 'nmLines.Array.data[1]'
+      value: Why is the game already paused?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791201642005474365, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: 'nmLines.Array.data[2]'
+      value: "Good. Maybe you\u2019ll take the hint and quit now."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791201642005474365, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: 'nmLines.Array.data[3]'
+      value: "Don\u2019t resume! There\u2019s nothing for you here."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791201642005474365, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: 'nmLines.Array.data[4]'
+      value: Just go. Touch grass. Sleep
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791201642005474365, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: 'nmLines.Array.data[5]'
+      value: Oh. You showed up
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791201642005474365, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: 'nmLines.Array.data[8]'
+      value: asdasdasdas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2791201642005474365, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: 'nmLines.Array.data[9]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975694837357038684, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
+      propertyPath: m_Name
+      value: NarratorManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 150c0f03ee7ac4c308aa878c97529aa7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 873162578}
+  - {fileID: 1957243069}
   - {fileID: 80545186}
   - {fileID: 1751536891}

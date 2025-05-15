@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54048978e60b15817a69d1ae3e4c693c, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  lines:
+  - "Wait\u2014what are you doing? Stop clicking that button."
+  - "NO! You\u2019re not supposed to click it yet!"
+  - Oh, I see! You're really going for it.
+  - You want to start, huh? How original. Are you sure about that?
+  - thinking this is where the fun begins? The big moment? The epic finale?
+  index: 0
