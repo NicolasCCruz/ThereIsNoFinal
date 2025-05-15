@@ -22,6 +22,8 @@ public class TypeToWin : MonoBehaviour
 
     void Update()
     {
+        if (!FloatingPauseButtonController.canType) return;
+
         foreach (char c in Input.inputString)
         {
             if (!char.IsLetter(c) && c != ' ')
@@ -34,7 +36,7 @@ public class TypeToWin : MonoBehaviour
                 typed += lowerC;
                 typedText.text = typed;
 
-                char toReplace = char.ToUpper(lowerC); // Match uppercase in title
+                char toReplace = char.ToUpper(lowerC);
                 for (int i = 0; i < displayedTitle.Length; i++)
                 {
                     if (displayedTitle[i] == toReplace)
@@ -48,8 +50,8 @@ public class TypeToWin : MonoBehaviour
 
                 if (typed == targetPhrase)
                 {
-                    SceneManager.LoadScene("EndScreen"); // Replace with your actual scene name
-
+                    SceneManager.LoadScene("EndScreen"); // Replace with actual name
+                    this.enabled = false;
                 }
             }
         }
