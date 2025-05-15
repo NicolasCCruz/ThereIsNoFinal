@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54048978e60b15817a69d1ae3e4c693c, type: 3}
+  m_Name: TittlePuzzle
+  m_EditorClassIdentifier: 
+  lines:
+  - "Hmm... looks like you\u2019ve stumbled onto something... important."
+  - "You\u2019re staring at the title screen. Does it ring a bell?"
+  - "Wait, don\u2019t tell me. You still don\u2019t know what to do?"
+  - Could be a clue right there in front of you. Think carefully.
+  - "I bet you\u2019re not just going to sit there... are you?"
+  - Maybe something should be typed... what could it be?
+  - "I\u2019m not saying you should finish anything... but it\u2019s there. You know
+    it is."
+  - "It\u2019s the end, after all. Somebody has to do it, don\u2019t they?"
+  - I mean, you could try typing something. Just a suggestion.
+  - "Well, if you *really* can\u2019t figure it out, just... type something."
+  - 'Are you even trying to finish ... project or type something '
+  - Alright, alright, no pressure. But, you *do* want to finish, right?
+  - "You\u2019ve made it this far... Surely you can manage one last thing?"
+  - "Could it be... the project is calling for a... \u2018finish\u2019? Or am I wrong?"
+  index: 0
