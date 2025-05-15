@@ -19,6 +19,8 @@ public class FloatingPauseButtonController : MonoBehaviour
     private bool fadingOut = true;
     private bool activated = false;
 
+    public static bool canType = false;
+
     // Clamping bounds
     private float minX = -422f;
     private float maxX = 429f;
@@ -34,7 +36,6 @@ public class FloatingPauseButtonController : MonoBehaviour
         c.a = 0f;
         pauseButtonText.color = c;
 
-        Debug.Log("FloatingPauseButtonController started. Waiting for activation.");
     }
 
     void Update()
@@ -54,7 +55,6 @@ public class FloatingPauseButtonController : MonoBehaviour
     public void ActivatePauseButton()
     {
         activated = true;
-        Debug.Log("Pause button behavior activated after Resume.");
     }
 
     void OnPauseClicked()
@@ -63,20 +63,17 @@ public class FloatingPauseButtonController : MonoBehaviour
 
         if (!locked)
         {
-            Debug.Log("Pause button clicked. Click count: " + clickCount);
-
             if (clickCount >= 3)
-            {
-                locked = true;
-                SnapPauseButtonToTopRight();
-                pauseMenu.ResumeFromFloatingPause();
-                Debug.Log("Pause button locked. Triggering pause menu resume.");
-                return;
-            }
+                {
+                    locked = true;
+                    canType = true; // <-- Allow typing now
+                    SnapPauseButtonToTopRight();
+                    pauseMenu.ResumeFromFloatingPause();
+                    return;
+                }
         }
         else
         {
-            Debug.Log("Locked pause button clicked. Triggering pause menu again.");
             pauseMenu.ResumeFromFloatingPause();
         }
     }
@@ -89,7 +86,6 @@ public class FloatingPauseButtonController : MonoBehaviour
         Vector2 clampedPosition = new Vector2(x, y);
         pauseButtonTransform.anchoredPosition = clampedPosition;
 
-        Debug.Log("Pause button position set to: " + clampedPosition.ToString("F2"));
     }
 
     void FlashPauseButtonText()
@@ -128,6 +124,5 @@ public class FloatingPauseButtonController : MonoBehaviour
         c.a = 1f;
         pauseButtonText.color = c;
 
-        Debug.Log("Pause button snapped to top right at: " + clampedTopRight.ToString("F2"));
     }
 }

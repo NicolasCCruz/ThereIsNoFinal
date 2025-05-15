@@ -107,7 +107,7 @@ public class PauseMenuController : MonoBehaviour
 
         if (floatingPauseButton != null)
         {
-            floatingPauseButton.SetActive(true); // activate the floating pause button
+            floatingPauseButton.SetActive(true);
         }
         floatingPauseButton.SetActive(true);
         floatingPauseButton.GetComponent<FloatingPauseButtonController>().ActivatePauseButton();
