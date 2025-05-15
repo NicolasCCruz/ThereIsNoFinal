@@ -13,9 +13,19 @@ MonoBehaviour:
   m_Name: TittlePuzzle
   m_EditorClassIdentifier: 
   lines:
-  - "Hey! That\u2019s the TITLE. You can\u2019t just rearrange it!"
-  - "I see what you\u2019re doing\u2026"
-  - You clever little overachiever.
-  - "NO! Stop! If you finish it\u2026 you finish the project!"
-  - '...    '
+  - "Hmm... looks like you\u2019ve stumbled onto something... important."
+  - "You\u2019re staring at the title screen. Does it ring a bell?"
+  - "Wait, don\u2019t tell me. You still don\u2019t know what to do?"
+  - Could be a clue right there in front of you. Think carefully.
+  - "I bet you\u2019re not just going to sit there... are you?"
+  - Maybe something should be typed... what could it be?
+  - "I\u2019m not saying you should finish anything... but it\u2019s there. You know
+    it is."
+  - "It\u2019s the end, after all. Somebody has to do it, don\u2019t they?"
+  - I mean, you could try typing something. Just a suggestion.
+  - "Well, if you *really* can\u2019t figure it out, just... type something."
+  - 'Are you even trying to finish ... project or type something '
+  - Alright, alright, no pressure. But, you *do* want to finish, right?
+  - "You\u2019ve made it this far... Surely you can manage one last thing?"
+  - "Could it be... the project is calling for a... \u2018finish\u2019? Or am I wrong?"
   index: 0
